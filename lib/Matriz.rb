@@ -55,4 +55,21 @@ class Matriz
     end
     Matriz.new(@fil, @col, mat)
   end
+
+    def *(other) # Metodo que multiplica 2 matrice
+    raise ArgumentError, 'Las matrices no se pueden multplicar' unless ((@fil == other.col) || (@col == other.fil))  
+    mat = Array.new(0)
+    for i in 0...fil do
+      fila = Array.new(0)
+      for j in 0...other.col do
+        aux = 0
+        for k in 0...col do
+          aux += matriz[i][k] * other.matriz[k][j]
+        end
+        fila << aux
+      end
+      mat << fila
+    end
+    Matriz.new(@fil, other.col, mat)
+  end
 end
