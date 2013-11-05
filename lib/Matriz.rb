@@ -42,4 +42,17 @@ class Matriz
       end
     Matriz.new(@fil, @col, mat)
   end
+
+  def -(other) # Metodo que resta 2 matrices
+    raise ArgumentError, 'Las matrices no tienen el mismo tamaño, no se pueden restar' unless ((@fil == other.fil) || (@col == other.col))  
+    mat = Array.new(0)
+    for i in 0...filas do
+      fila = Array.new(0)
+      for j in 0...colum do
+        fila << matriz[i][j] - other.matriz[i][j]
+      end
+      elemento << fila
+    end
+    Matriz.new(@fil, @col, mat)
+  end
 end
