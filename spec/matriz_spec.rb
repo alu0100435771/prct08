@@ -32,3 +32,32 @@ describe Matriz do
                 end
 
         end
+
+        # Comprobacion de las operaciones de suma y resta de matrices
+        describe "Comprobamos la suma y resta de matrices" do
+                it " - Suma\n" do
+                        @temp = Matriz.new(2,2,[[6,8],[8,6]])
+                        @temp2 = @a+@e
+                        @temp2.to_s.should eq(@temp.to_s)
+                end
+                it " - Resta\n" do
+                        @temp = Matriz.new(2,2,[[2,0],[-2,0]])
+                        @temp2 = @e-@a
+                        @temp2.to_s.should eq(@temp.to_s)
+                end
+        end
+        
+        # Comprobacion de la multiplicacion
+        describe "Comprobamos la multiplicacion" do
+                it " Multiplicacion de dos matrices" do
+                        @temp = Matriz.new(2,2,[[34,32],[19,18]])
+                        @temp2 = @c.*(@d)
+                        @temp2.to_s.should eq(@temp.to_s)
+                end
+                it " Multiplicacion por un escalar" do
+                        @temp = Matriz.new(3,2,[[4,6],[6,4],[4,4]])
+                        @temp2 = @d.mult(2)
+                        @temp2.to_s.should eq(@temp.to_s)
+                end
+        end
+        
