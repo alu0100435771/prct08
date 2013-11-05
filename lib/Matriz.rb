@@ -51,7 +51,7 @@ class Matriz
       for j in 0...colum do
         fila << matriz[i][j] - other.matriz[i][j]
       end
-      elemento << fila
+       mat << fila
     end
     Matriz.new(@fil, @col, mat)
   end
@@ -73,14 +73,14 @@ class Matriz
     Matriz.new(@fil, other.col, mat)
   end
 
-  def mult (*other) # Metodo para multiplicar una matriz por un numero
+  def mult (other) # Metodo para multiplicar una matriz por un numero
     mat = Array.new(0)
     for i in 0...filas do
       fila = Array.new(0)
       for j in 0...colum do
-        fila << matriz[i][j]*other
+        fila << matriz[i][j] * other
       end
-      elemento << fila
+      mat << fila
     end
     Matriz.new(@fil, @col, mat)
   end
