@@ -31,7 +31,7 @@ class Matriz
   end
 
   def +(other) # Metodo que suma 2 matrices
-    raise ArgumentError, 'Las matrices no tienen el mismo tamaño, no se pueden sumar' unless ((@fil == other.fil) || (@col == other.col))
+    raise ArgumentError, 'Las matrices no tienen el mismo tamano, no se pueden sumar' unless ((@fil == other.fil) || (@col == other.col))
     mat = Array.new(0)
       for i in 0...filas do
         fila = Array.new(0)
@@ -44,7 +44,7 @@ class Matriz
   end
 
   def -(other) # Metodo que resta 2 matrices
-    raise ArgumentError, 'Las matrices no tienen el mismo tamaño, no se pueden restar' unless ((@fil == other.fil) || (@col == other.col))  
+    raise ArgumentError, 'Las matrices no tienen el mismo tamano, no se pueden restar' unless ((@fil == other.fil) || (@col == other.col))  
     mat = Array.new(0)
     for i in 0...filas do
       fila = Array.new(0)
