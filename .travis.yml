@@ -6,4 +6,3 @@ rvm:
   - jruby-19mode # JRuby in 1.9 mode
   - rbx-20mode
   - rbx-19mode
-  - 1.8.7
